@@ -1,0 +1,20 @@
+{
+    "name": "logging-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "logging-server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node logging-server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/m-j/logging-server.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/m-j/logging-server/issues"
+    },
+    "homepage": "https://github.com/m-j/logging-server#readme"
+}
