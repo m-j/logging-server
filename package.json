@@ -16,5 +16,8 @@
     "bugs": {
         "url": "https://github.com/m-j/logging-server/issues"
     },
-    "homepage": "https://github.com/m-j/logging-server#readme"
+    "homepage": "https://github.com/m-j/logging-server#readme",
+    "dependencies": {
+        "winston": "^3.1.0"
+    }
 }

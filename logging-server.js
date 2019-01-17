@@ -1,22 +1,23 @@
 var http = require('http');
+var logger = require('./logging').logger
+var endOfLine = require('os').EOL;
 
 var server = http.createServer(function (request, response) {
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.end();
 
+    logger.log({level: 'info', message: request.url});
+
     if(request.url === '/api/data-feed/betgenius/message'){
-        allData = '';
+        wholeBody = '';
 
         request.on('data', chunk => {
-            // console.log(chunk.toString('utf-8'));
-            allData += chunk.toString();
+            wholeBody += chunk.toString();
         });
 
         request.on('end', ()=> {
-           console.log(allData);
+           logger.log({level: 'info', message: endOfLine + wholeBody})
         });
-
-
     }
 
 });
