@@ -55,7 +55,7 @@ var server = http.createServer(function (request, response) {
     }
 });
 
-var port = 5555;
+var port = 3000;
 
 server.listen(port);
 
