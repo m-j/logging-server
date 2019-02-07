@@ -1,5 +1,5 @@
 var http = require('http');
-var logger = require('./logging').logger
+var logger = require('./logging').logger;
 var endOfLine = require('os').EOL;
 
 const msgPath = '/api/data-feed/betgenius/message';
@@ -45,6 +45,11 @@ var server = http.createServer(function (request, response) {
 
                         req.write(wholeBody);
                         req.end();
+                        req.setTimeout(5000);
+
+                        req.on('error', e => {
+                            console.error(`Request error while calling ${host.hostname}:${host.port}`);
+                        })
 
                     } catch(ex) {
 
