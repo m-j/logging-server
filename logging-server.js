@@ -34,7 +34,6 @@ var server = http.createServer(function (request, response) {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
-                                'Content-Length': wholeBody.length,
                                 'Authorization': 'Basic token-here!'
                             }
                         };
